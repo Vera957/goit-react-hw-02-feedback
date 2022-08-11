@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import propTypes from 'prop-types'
 
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
     return (<>
@@ -24,3 +25,8 @@ const Btn = styled.button`
         scale: 1.1;
     }
 `
+
+FeedbackOptions.propTypes = {
+    options: propTypes.array,
+    onLeaveFeedback: propTypes.func,
+}

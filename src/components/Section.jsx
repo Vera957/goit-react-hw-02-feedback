@@ -1,5 +1,6 @@
 import React from "react";
 import { Box } from "./Box";
+import propTypes from 'prop-types';
 
 export const Section = ({title, children}) => {
     return (<Box
@@ -21,4 +22,9 @@ export const Section = ({title, children}) => {
         <h2>{title}</h2>
         {children}
     </Box>)
+}
+
+Section.propTypes = {
+    title: propTypes.string,
+    children: propTypes.elementType,
 }

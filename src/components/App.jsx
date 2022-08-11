@@ -9,7 +9,6 @@ export class App extends React.Component {
     neutral: 0,
     bad: 0
   }
-  
 
   onLeaveFeedback = (e) => {
     const { name } = e.currentTarget;

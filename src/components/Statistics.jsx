@@ -2,6 +2,8 @@ import React from "react";
 import { Box } from "./Box";
 import { Notification } from "./Notification";
 import styled from "styled-components";
+import propTypes from "prop-types";
+
 
 export const Statistic = ({ good, neutral, bad, total, positivePercentage }) => {
     total = good + bad + neutral;
@@ -29,4 +31,10 @@ const FeedbackList = styled.ul`
         padding: 4px;
     }
 `
-
+Statistic.propTypes = {
+    good: propTypes.string,
+    neutral: propTypes.string,
+    bad: propTypes.string,
+    total: propTypes.number,
+    positivePercentage: propTypes.number,
+}
