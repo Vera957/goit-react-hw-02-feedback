@@ -32,9 +32,9 @@ const FeedbackList = styled.ul`
     }
 `
 Statistic.propTypes = {
-    good: propTypes.string,
-    neutral: propTypes.string,
-    bad: propTypes.string,
+    good: propTypes.number,
+    neutral: propTypes.number,
+    bad: propTypes.number,
     total: propTypes.number,
     positivePercentage: propTypes.number,
 }

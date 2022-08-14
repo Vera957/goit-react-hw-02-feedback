@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import propTypes from 'prop-types'
+import propTypes from 'prop-types';
 
-export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
+export const FeedbackOptions = ({ options, onLeaveFeedback }) => {  
     return (<>
         <Button>
-            {options.map(e=><Btn type="button" onClick={onLeaveFeedback} name={e} key={e}>{e}</Btn>)}
+            {options.map(e=><Btn type="button" onClick={()=>onLeaveFeedback(e)} name={e} key={e}>{e}</Btn>)}
         </Button>
     </>)
 }

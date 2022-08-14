@@ -11,13 +11,11 @@ export class App extends React.Component {
   }
 
   onLeaveFeedback = (e) => {
-    const { name } = e.currentTarget;
-    this.setState(prev => ({ [name]: prev[name] + 1 }));
+    this.setState(prev => ({ [e]: prev[e] + 1 }));
   }
 
   render() {
     const { good, neutral, bad } = this.state;
-    console.log(good)
 
     return (<>
       <Section title="Please leave feedback">
@@ -28,8 +26,8 @@ export class App extends React.Component {
           good={good}
           neutral={neutral}
           bad={bad}
-          total={5}
-          positivePercentage={5} />
+          total={0}
+          positivePercentage={0} />
       </Section>
     </>)
   }
